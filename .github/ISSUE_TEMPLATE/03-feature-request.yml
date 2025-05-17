@@ -1,0 +1,68 @@
+name: 功能请求（Feature）
+description: 建议、需求、功能改进等
+title: "[Feature] "
+labels: ["enhancement", "adguardhome"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        有功能需求或改进建议？请详细描述您的想法。
+
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式
+      description: 如需进一步沟通，如何联系您？（可选）
+      placeholder: 例如：email@example.com
+    validations:
+      required: false
+
+  - type: textarea
+    id: feature
+    attributes:
+      label: 功能描述
+      description: 详细描述您希望实现的功能或改进建议
+      placeholder: 例如：希望支持自定义规则同步等
+    validations:
+      required: true
+
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 场景说明（如有）
+      description: 您的需求/建议适用于哪些场景？能带来哪些好处？
+      placeholder: 例如：多设备协同使用时方便统一管理
+    validations:
+      required: false
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: ADGuardHome 版本
+      description: 当前使用的 ADGuardHome 版本
+      options:
+        - "未知"
+        - "v0.107.x 稳定版"
+        - "v0.107.x 测试版"
+        - "自编译/其他"
+      default: 0
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: 部署环境
+      description: 运行 ADGuardHome 的系统/平台/设备
+      placeholder: 例如：Windows 10、OpenWrt、树莓派 4B 等
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 行为准则
+      description: 提交议题即表示同意遵守本项目的 [行为准则](https://github.com/AdguardTeam/AdGuardHome/blob/master/.github/CODE_OF_CONDUCT.md)
+      options:
+        - label: 我同意遵守本项目的行为准则
+          required: true

@@ -1,0 +1,27 @@
+name: 空白模板
+description: 自由描述您的问题、建议或其它内容
+title: "[Other] "
+labels: ["adguardhome"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        自由填写您的问题、建议、反馈等。请尽量详细，便于社区了解和帮助您。
+
+  - type: textarea
+    id: content
+    attributes:
+      label: 内容
+      description: 描述您的问题、建议或其它内容
+      placeholder: 请输入详细内容
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 行为准则
+      description: 提交议题即表示同意遵守本项目的 [行为准则](https://github.com/AdguardTeam/AdGuardHome/blob/master/.github/CODE_OF_CONDUCT.md)
+      options:
+        - label: 我同意遵守本项目的行为准则
+          required: true

@@ -1,0 +1,86 @@
+name: Bug 报告
+description: 反馈 ADGuardHome 使用中的问题/故障
+title: "[Bug] "
+labels: ["bug", "adguardhome", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您反馈 ADGuardHome 的问题！请尽量详细填写以下内容，以便我们排查和修复。
+
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式
+      description: 如需进一步沟通，如何联系您？（可选）
+      placeholder: 例如：email@example.com
+    validations:
+      required: false
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: 故障现象
+      description: 请详细描述遇到的问题、异常表现，以及期望结果。
+      placeholder: 例如：DNS 解析失败，网页无法加载等
+    validations:
+      required: true
+
+  - type: textarea
+    id: cause
+    attributes:
+      label: 已知原因（如有）
+      description: 如果您判断出可能原因，请在此说明。
+      placeholder: 例如：某规则冲突，更新后出现等
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 浮现（复现）方法
+      description: 如何触发此问题？详细描述步骤。
+      placeholder: 例如：1. 启动 ADGuardHome 2. 访问 example.com 3. 页面报错
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关日志
+      description: 复制粘贴与问题相关的 ADGuardHome 日志（建议去除敏感信息），内容将自动格式化。
+      render: shell
+    validations:
+      required: false
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: ADGuardHome 版本
+      description: 当前使用的 ADGuardHome 版本
+      options:
+        - "未知"
+        - "v0.107.x 稳定版"
+        - "v0.107.x 测试版"
+        - "自编译/其他"
+      default: 0
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: 部署环境
+      description: 运行 ADGuardHome 的系统/平台/设备
+      placeholder: 例如：Windows 10、OpenWrt、树莓派 4B 等
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 行为准则
+      description: 提交议题即表示同意遵守本项目的 [行为准则](https://github.com/AdguardTeam/AdGuardHome/blob/master/.github/CODE_OF_CONDUCT.md)
+      options:
+        - label: 我同意遵守本项目的行为准则
+          required: true
