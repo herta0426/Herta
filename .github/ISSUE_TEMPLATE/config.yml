@@ -1,8 +1,9 @@
 blank_issues_enabled: false
 contact_links:
-  - name: GitHub Community Support
-    url: https://github.com/orgs/community/discussions
-    about: 请在这里提问或解答一般性问题。
-  - name: ADGuard 官方支持
-    url: https://adguard.com/
-    about: 商业技术支持或其他官方服务请前往官网。
+  - name: 常见问题解答
+    url: https://github.com/liuzq2002/Adguard-Home-For-Magisk-Mod#faq
+    about: 请先查阅已知问题解决方案
+  - name: 实时讨论 
+    url: https://qm.qq.com/q/kKit0PhHOM
+    about: 加入 春梦闲聊&交流群
+    
